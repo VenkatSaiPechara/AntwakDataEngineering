@@ -1,0 +1,1 @@
+30 23 * * * /home/venkat/linux.bash
