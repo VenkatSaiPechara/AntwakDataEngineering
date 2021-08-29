@@ -1,0 +1,16 @@
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/antwak" \
+--username root \
+--password cloudera \
+--table customers \
+--warehouse-dir /user/cloudera/query
+
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/antwak" \
+--username root \
+--password cloudera \
+--table customers \
+--hive-table antwak.customers \
+--field-terminated-by ','

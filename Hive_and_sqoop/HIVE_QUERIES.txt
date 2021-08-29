@@ -1,0 +1,14 @@
+
+use antwak;
+
+LOAD DATA INPATH '/user/cloudera/query/cutomers/part*/' into table customers;
+
+select count(*) from customers;
+
+select count(*) from customers where customer_state='TX';
+
+select customer_state,count(*) number from customers group by customer_state order by number limit 1;
+
+select customer_state,count(*) number from customers group by customer_state order by number desc limit 1;
+
+select count(*) from customers where customer_fname='Mary';
